@@ -1,0 +1,69 @@
+equipo,match_id,fecha,fase,condicion,oponente,marcador_local,marcador_visita
+Argentina,3869321,2022-12-09,Quarter-finals,Visitante,Netherlands,2,2
+Argentina,3869685,2022-12-18,Final,Local,France,3,3
+Argentina,3869151,2022-12-03,Round of 16,Local,Australia,2,1
+Argentina,3857264,2022-11-30,Group Stage,Visitante,Poland,0,2
+Argentina,3857289,2022-11-26,Group Stage,Local,Mexico,2,0
+Argentina,3869519,2022-12-13,Semi-finals,Local,Croatia,3,0
+Argentina,3857300,2022-11-22,Group Stage,Local,Saudi Arabia,1,2
+Francia,3857275,2022-11-30,Group Stage,Visitante,Tunisia,1,0
+Francia,3857266,2022-11-26,Group Stage,Local,Denmark,2,1
+Francia,3869685,2022-12-18,Final,Visitante,Argentina,3,3
+Francia,3869354,2022-12-10,Quarter-finals,Visitante,England,1,2
+Francia,3869552,2022-12-14,Semi-finals,Local,Morocco,2,0
+Francia,3869152,2022-12-04,Round of 16,Local,Poland,3,1
+Francia,3857279,2022-11-22,Group Stage,Local,Australia,4,1
+Brasil,3857269,2022-11-28,Group Stage,Local,Switzerland,1,0
+Brasil,3857258,2022-11-24,Group Stage,Local,Serbia,2,0
+Brasil,3869420,2022-12-09,Quarter-finals,Visitante,Croatia,1,1
+Brasil,3869253,2022-12-05,Round of 16,Local,South Korea,4,1
+Brasil,3857280,2022-12-02,Group Stage,Visitante,Cameroon,1,0
+Inglaterra,3857271,2022-11-21,Group Stage,Local,Iran,6,2
+Inglaterra,3857272,2022-11-25,Group Stage,Local,United States,0,0
+Inglaterra,3857261,2022-11-29,Group Stage,Visitante,Wales,0,3
+Inglaterra,3869118,2022-12-04,Round of 16,Local,Senegal,3,0
+Inglaterra,3869354,2022-12-10,Quarter-finals,Local,France,1,2
+Portugal,3857298,2022-11-24,Group Stage,Local,Ghana,3,2
+Portugal,3869486,2022-12-10,Quarter-finals,Visitante,Morocco,1,0
+Portugal,3869254,2022-12-06,Round of 16,Local,Switzerland,6,1
+Portugal,3857270,2022-11-28,Group Stage,Local,Uruguay,2,0
+Portugal,3857262,2022-12-02,Group Stage,Visitante,South Korea,2,1
+Alemania,3857284,2022-11-23,Group Stage,Local,Japan,1,2
+Alemania,3857292,2022-12-01,Group Stage,Visitante,Costa Rica,2,4
+Alemania,3857263,2022-11-27,Group Stage,Visitante,Spain,1,1
+Espana,3857255,2022-12-01,Group Stage,Visitante,Japan,2,1
+Espana,3869220,2022-12-06,Round of 16,Visitante,Morocco,0,0
+Espana,3857263,2022-11-27,Group Stage,Local,Germany,1,1
+Espana,3857291,2022-11-23,Group Stage,Local,Costa Rica,7,0
+Paises Bajos,3857274,2022-11-25,Group Stage,Local,Ecuador,1,1
+Paises Bajos,3857285,2022-11-21,Group Stage,Visitante,Senegal,0,2
+Paises Bajos,3857294,2022-11-29,Group Stage,Local,Qatar,2,0
+Paises Bajos,3869321,2022-12-09,Quarter-finals,Local,Argentina,2,2
+Paises Bajos,3869117,2022-12-03,Round of 16,Local,United States,3,1
+Croacia,3857296,2022-12-01,Group Stage,Local,Belgium,0,0
+Croacia,3857277,2022-11-23,Group Stage,Visitante,Morocco,0,0
+Croacia,3869684,2022-12-17,3rd Place Final,Local,Morocco,2,1
+Croacia,3869519,2022-12-13,Semi-finals,Visitante,Argentina,3,0
+Croacia,3869420,2022-12-09,Quarter-finals,Local,Brazil,1,1
+Croacia,3869219,2022-12-05,Round of 16,Visitante,Japan,1,1
+Croacia,3857281,2022-11-27,Group Stage,Local,Canada,4,1
+Marruecos,3857276,2022-12-01,Group Stage,Visitante,Canada,1,2
+Marruecos,3857277,2022-11-23,Group Stage,Local,Croatia,0,0
+Marruecos,3869684,2022-12-17,3rd Place Final,Visitante,Croatia,2,1
+Marruecos,3869486,2022-12-10,Quarter-finals,Local,Portugal,1,0
+Marruecos,3869552,2022-12-14,Semi-finals,Visitante,France,2,0
+Marruecos,3869220,2022-12-06,Round of 16,Local,Spain,0,0
+Marruecos,3857283,2022-11-27,Group Stage,Visitante,Belgium,0,2
+Belgica,3857296,2022-12-01,Group Stage,Visitante,Croatia,0,0
+Belgica,3857268,2022-11-23,Group Stage,Local,Canada,1,0
+Belgica,3857283,2022-11-27,Group Stage,Local,Morocco,0,2
+Uruguay,3857287,2022-11-24,Group Stage,Local,South Korea,0,0
+Uruguay,3857270,2022-11-28,Group Stage,Visitante,Portugal,2,0
+Uruguay,3857293,2022-12-02,Group Stage,Visitante,Ghana,0,2
+Estados Unidos,3857272,2022-11-25,Group Stage,Visitante,England,0,0
+Estados Unidos,3857278,2022-11-29,Group Stage,Visitante,Iran,0,1
+Estados Unidos,3857282,2022-11-21,Group Stage,Local,Wales,1,1
+Estados Unidos,3869117,2022-12-03,Round of 16,Visitante,Netherlands,3,1
+Mexico,3857265,2022-11-22,Group Stage,Local,Poland,0,0
+Mexico,3857260,2022-11-30,Group Stage,Visitante,Saudi Arabia,1,2
+Mexico,3857289,2022-11-26,Group Stage,Visitante,Argentina,2,0
