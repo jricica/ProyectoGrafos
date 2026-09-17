@@ -2,3 +2,6 @@ venv/
 /pycache/
 *.pyc
 output/
+__MACOSX/
+._*
+.DS_Store

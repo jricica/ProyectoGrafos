@@ -4,7 +4,6 @@ Requisito 1: Carga el archivo, filtra la fase de grupos y pases completados,
 conservando únicamente las columnas necesarias para el análisis.
 """
 
-import os
 import pandas as pd
 
 PARTIDOS = {
@@ -36,10 +35,8 @@ NOMBRES_CORTOS = {
 }
 
 
-def cargar_datos(ruta='data/pases_uruguay.csv'):
+def cargar_datos(ruta='Datasets pases FWC 22/pases_uruguay.csv'):
     """Carga el CSV original con soporte UTF-8."""
-    if not os.path.exists(ruta):
-        ruta = 'Datasets pases FWC 22/pases_uruguay.csv'
     return pd.read_csv(ruta, encoding='utf-8')
 
 
