@@ -4,6 +4,9 @@ Requisitos 2 y 3:
 - Grafo dirigido (nx.DiGraph): modela la dirección del pase (A -> B).
 - Ponderado (weight): cantidad de pases completados entre jugadores.
 - Grafo consolidado y grafos individuales por cada partido.
+- Métricas de centralidad como apoyo cuantitativo para la interpretación
+  futbolística (no exigidas por el enunciado, pero útiles para sostener
+  el análisis del estilo de juego).
 """
 
 import networkx as nx
@@ -101,3 +104,25 @@ def resumen_grafo(G):
         'total_pases': total_pases,
         'densidad': round(nx.density(G), 3)
     }
+
+
+def calcular_centralidades(G):
+    """
+    Calcula out-degree, in-degree y betweenness ponderados por jugador,
+    como apoyo cuantitativo para la interpretación del estilo de juego.
+    """
+    out_deg = dict(G.out_degree(weight='weight'))
+    in_deg = dict(G.in_degree(weight='weight'))
+    betweenness = nx.betweenness_centrality(G, weight='weight', normalized=True)
+
+    filas = []
+    for jugador in G.nodes():
+        filas.append({
+            'Jugador': jugador,
+            'Pases Dados': out_deg.get(jugador, 0),
+            'Pases Recibidos': in_deg.get(jugador, 0),
+            'Betweenness': round(betweenness.get(jugador, 0.0), 4)
+        })
+
+    df_cent = pd.DataFrame(filas)
+    return df_cent.sort_values('Pases Dados', ascending=False).reset_index(drop=True)

@@ -16,7 +16,8 @@ from src.graph import (
     crear_grafos_por_partido,
     obtener_top_conexiones,
     obtener_sociedades,
-    resumen_grafo
+    resumen_grafo,
+    calcular_centralidades
 )
 
 def print_banner(titulo: str):
@@ -100,6 +101,27 @@ def run_step_3(df_clean):
             print(f"     - {row['Pasador']} -> {row['Receptor']}: {row['Pases']} pases (media {row['Distancia Media (m)']}m)")
         print()
 
+def run_step_4(G_total):
+    print_banner("Paso 4: Métricas de Centralidad")
+
+    print(" Interpretación de las métricas:")
+    print("  * Pases Dados (out-degree)   -> jugadores que más distribuyen el balón.")
+    print("  * Pases Recibidos (in-degree) -> jugadores de referencia / puntos de descarga.")
+    print("  * Betweenness                -> jugadores que conectan zonas o líneas del equipo.")
+
+    df_cent = calcular_centralidades(G_total)
+
+    print("\n Top 5 por Pases Dados (constructores de juego):")
+    print(df_cent.sort_values('Pases Dados', ascending=False).head(5).to_string(index=False))
+
+    print("\n Top 5 por Pases Recibidos (referencias del equipo):")
+    print(df_cent.sort_values('Pases Recibidos', ascending=False).head(5).to_string(index=False))
+
+    print("\n Top 5 por Betweenness (conectores / puentes entre líneas):")
+    print(df_cent.sort_values('Betweenness', ascending=False).head(5).to_string(index=False))
+
+    return df_cent
+
 def main():
     print("=" * 70)
     print(" PROYECTO: ANÁLISIS DE REDES DE PASES - URUGUAY (QATAR 2022)")
@@ -109,8 +131,7 @@ def main():
     df_clean = run_step_1()
     G_total = run_step_2(df_clean)
     run_step_3(df_clean)
-
-    print_banner("Paso: Paso 4 - Métricas de Centralidad")
+    run_step_4(G_total)
 
 
 if __name__ == '__main__':
