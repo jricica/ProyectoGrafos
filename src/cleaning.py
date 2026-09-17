@@ -53,7 +53,8 @@ def limpiar_datos(df, solo_completos=True):
     
     columnas = [
         'fase', 'resultado', 'jugador_nombre', 'receptor_nombre',
-        'longitud_pase', 'match_id', 'minuto', 'oponente'
+        'longitud_pase', 'match_id', 'minuto', 'oponente',
+        'inicio_x', 'inicio_y', 'fin_x', 'fin_y'
     ]
     df_limpio = df_limpio[columnas].copy()
 
@@ -66,3 +67,16 @@ def limpiar_datos(df, solo_completos=True):
         df_limpio = df_limpio[df_limpio['receptor_nombre'].notnull()]
 
     return df_limpio
+
+
+def calcular_posiciones(df):
+    """Posición promedio de cada jugador en la cancha (origen al pasar, destino al recibir)."""
+    origenes = df[['jugador_nombre', 'inicio_x', 'inicio_y']].rename(
+        columns={'jugador_nombre': 'jugador', 'inicio_x': 'x', 'inicio_y': 'y'}
+    )
+    destinos = df[['receptor_nombre', 'fin_x', 'fin_y']].rename(
+        columns={'receptor_nombre': 'jugador', 'fin_x': 'x', 'fin_y': 'y'}
+    )
+    todas = pd.concat([origenes, destinos], ignore_index=True)
+    promedio = todas.groupby('jugador')[['x', 'y']].mean()
+    return {jugador: (fila['x'], fila['y']) for jugador, fila in promedio.iterrows()}

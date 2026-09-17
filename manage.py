@@ -19,6 +19,7 @@ from src.graph import (
     resumen_grafo,
     calcular_centralidades
 )
+from src.visualization import graficar_grafo
 
 def print_banner(titulo: str):
     """Imprime un separador visual para cada sección."""
@@ -122,6 +123,26 @@ def run_step_4(G_total):
 
     return df_cent
 
+def run_step_5(G_total, df_clean):
+    print_banner("Paso 5: Visualización del Grafo")
+
+    from src.graph import crear_grafos_por_partido
+    from src.cleaning import PARTIDOS
+
+    os.makedirs('output', exist_ok=True)
+
+    graficar_grafo(G_total, df_clean, "Uruguay - Red de Pases (Fase de Grupos)", "output/grafo_consolidado.png")
+    print(" Guardado: output/grafo_consolidado.png")
+
+    match_graphs = crear_grafos_por_partido(df_clean)
+    for match_id, nombre_partido in PARTIDOS.items():
+        if nombre_partido not in match_graphs:
+            continue
+        df_partido = df_clean[df_clean['match_id'] == match_id]
+        archivo = "output/grafo_" + nombre_partido.lower().replace(" ", "_") + ".png"
+        graficar_grafo(match_graphs[nombre_partido], df_partido, "Uruguay - Red de Pases: " + nombre_partido, archivo)
+        print(f" Guardado: {archivo}")
+
 def main():
     print("=" * 70)
     print(" PROYECTO: ANÁLISIS DE REDES DE PASES - URUGUAY (QATAR 2022)")
@@ -132,6 +153,7 @@ def main():
     G_total = run_step_2(df_clean)
     run_step_3(df_clean)
     run_step_4(G_total)
+    run_step_5(G_total, df_clean)
 
 
 if __name__ == '__main__':
